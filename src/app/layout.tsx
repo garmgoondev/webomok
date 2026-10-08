@@ -48,6 +48,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://webomok.com',
   },
+  verification: {
+    google: '6HK2lNC43p4YkMm__fIUa6hQnH2IxTqN3SRVDuMviSw',
+    other: {
+      'naver-site-verification': 'da2ba5a659657cf0862b48024a87faa5727006ec',
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
@@ -145,6 +151,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="naver-site-verification" content="da2ba5a659657cf0862b48024a87faa5727006ec" />
+        <meta name="google-site-verification" content="6HK2lNC43p4YkMm__fIUa6hQnH2IxTqN3SRVDuMviSw" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
