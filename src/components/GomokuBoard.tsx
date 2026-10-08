@@ -116,8 +116,8 @@ export default function GomokuBoard({
     });
 
     // 4. Draw Coordinates (A-O, 1-15) along borders
-    ctx.fillStyle = '#7A4F23';
-    ctx.font = `600 ${Math.max(10, cellSize * 0.28)}px sans-serif`;
+    ctx.fillStyle = '#683F19';
+    ctx.font = `bold ${Math.max(14, cellSize * 0.40)}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
@@ -363,7 +363,7 @@ export default function GomokuBoard({
 
         {/* Warning Tooltip overlay */}
         {forbiddenReason && (
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-red-600/95 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full shadow-lg border border-red-400 animate-bounce">
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-red-600/95 text-white font-bold text-sm sm:text-base px-5 py-2 rounded-full shadow-xl border-2 border-red-400 animate-bounce">
             ⚠️ {forbiddenReason}
           </div>
         )}
