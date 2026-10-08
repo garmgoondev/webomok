@@ -146,9 +146,15 @@ export default function SeoContentSection() {
           <span className="bg-amber-500/20 text-amber-300 px-4 py-2 rounded-full border border-amber-500/40 font-bold">
             ● 오목 (WebOmok)
           </span>
-          <span className="bg-slate-800 text-slate-400 px-4 py-2 rounded-full border border-slate-700 cursor-not-allowed">
-            지뢰찾기 (Coming Soon)
-          </span>
+          <a
+            href="https://mine98.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 px-4 py-2 rounded-full border border-emerald-500/40 font-bold transition flex items-center gap-1.5"
+            title="윈도우 98 클래식 웹지뢰찾기 바로가기"
+          >
+            ● 웹지뢰찾기 (mine98.com) ↗
+          </a>
           <span className="bg-slate-800 text-slate-400 px-4 py-2 rounded-full border border-slate-700 cursor-not-allowed">
             루미타일 (Coming Soon)
           </span>
