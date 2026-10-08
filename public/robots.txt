@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://webomok.com/sitemap.xml
+Host: https://webomok.com
