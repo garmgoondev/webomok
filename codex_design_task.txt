@@ -1,0 +1,35 @@
+You are a World-Class Graphic Designer and Frontend UI/UX Architect for WebOmok (https://webomok.com), a modern 2-player Gomoku web application.
+
+TASK:
+Create a complete, premium visual identity, logo, favicon suite, and UI design assets for WebOmok, and apply them cleanly to the Next.js codebase.
+
+SPECIFIC REQUIREMENTS:
+
+1. BRAND & LOGO DESIGN:
+- Concept: A premium traditional Kaya-wood board texture, elegant dark slate background, intersecting grid lines with two tactile Gomoku stones (one deep obsidian Black stone with specular shine, one radiant pearl-luster White stone), complemented with a sleek golden accent.
+- Create `public/favicon.svg` (crisp, scalable SVG representation).
+- Create `src/components/BrandLogo.tsx`: An inline React SVG logo component that renders a high-end vector badge (44x44 or scalable) featuring the wooden board grid, glowing stones, and golden "五" (five) glyph with rich gradients and drop-shadows.
+
+2. FAVICON & PWA SUITE GENERATION:
+- Create a script or generate the full suite of icons:
+  - `public/favicon.svg`
+  - `public/favicon-16x16.png` (16x16)
+  - `public/favicon-32x32.png` (32x32)
+  - `public/favicon-48x48.png` (48x48)
+  - `public/apple-touch-icon.png` (180x180)
+  - `public/icon.png` (512x512)
+  - `src/app/favicon.ico` (multi-size ICO file for browser tabs)
+  - `public/site.webmanifest` (PWA web app manifest with webomok details, colors, icons)
+
+3. INTEGRATION INTO NEXT.JS:
+- Update `src/app/layout.tsx`:
+  - Add `icons` property in `metadata` with icon, apple, and shortcut entries.
+  - Add `manifest: '/site.webmanifest'` in `metadata`.
+  - Add `themeColor: '#020617'` in metadata or viewport.
+- Update `src/app/page.tsx`:
+  - Replace the crude square with plain text "五" in the header navbar with the new `<BrandLogo />` component.
+- Remove obsolete Next.js starter files from `public/` (`file.svg`, `globe.svg`, `next.svg`, `vercel.svg`, `window.svg`).
+
+4. QUALITY CHECK:
+- Verify that `pnpm exec tsc --noEmit` passes without errors.
+- Ensure all created SVG/canvas/image files are clean, aesthetically pleasing, and production-ready.

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -13,6 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: '/favicon.ico',
+  },
   metadataBase: new URL('https://webomok.com'),
   title: '웹오목 (WebOmok) - 설치 없는 무료 2인용 온라인 오목 & 똑똑한 AI 대국',
   description:
@@ -77,6 +88,11 @@ export const metadata: Metadata = {
     description: '설치 없는 무료 온라인 오목. 똑똑한 AI 대국과 실시간 2인 대전.',
     images: ['/og-image.png'],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#020617',
+  colorScheme: 'dark',
 };
 
 const jsonLd = {

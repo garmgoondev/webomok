@@ -24,6 +24,7 @@ import {
 import GomokuBoard from '../components/GomokuBoard';
 import SeoContentSection from '../components/SeoContentSection';
 import LoginModal from '../components/LoginModal';
+import BrandLogo from '../components/BrandLogo';
 import {
   AIDifficulty,
   BoardState,
@@ -513,9 +514,7 @@ export default function Home() {
       {/* 1. Global Navigation Bar */}
       <header className="w-full max-w-5xl mx-auto px-4 py-4 sm:py-5 flex items-center justify-between border-b border-slate-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center font-black text-slate-950 shadow-xl text-xl">
-            五
-          </div>
+          <BrandLogo width={44} height={44} className="w-10 h-10 sm:w-11 sm:h-11 shadow-xl shrink-0" />
           <div>
             <div className="flex items-center gap-2">
               <span className="font-extrabold text-2xl sm:text-3xl tracking-tight text-white">
